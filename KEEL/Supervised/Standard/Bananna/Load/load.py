@@ -9,11 +9,18 @@ class Base_Load:
         self.inputs, self.attributes = self.read_inputs(), self.read_attributes()
 
     def data(self):
-        return pd.read_csv(f"{self.dir}/{self.datafile}", sep='\s*,\s*')
+        return pd.read_csv(f"{self.dir}/{self.datafile}", sep='\s*,\s*', engine='python')
+
+    def describe(self):
+        return self.data().describe()
 
     def header_file(self):
         return f"{self.dir}/{self.headerfile}"
 
+    # Look to fix attributes function. We have to accout for
+    #   all possible configurations. The bounds of the data will 
+    #   become increasingly important over the Visual, Transform
+    #   and ML classes.
     def read_attributes(self):
         pattern = r'\@attribute.*\n'
         text = open(self.header_file(), "r").read()

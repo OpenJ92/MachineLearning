@@ -3,7 +3,7 @@ from Load.load import Base_Load
 
 class Supervised(Base_Load):
     def __init__(self, dir_, datafile, headerfile):
-        super().__init__(dir_, datafile, headerfile)
+        Base_Load.__init__(self, dir_, datafile, headerfile)
         self.outputs = self.read_outputs()
 
     def read_outputs(self):
