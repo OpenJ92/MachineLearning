@@ -7,7 +7,7 @@ class Supervised(Base_Load):
         self.outputs = self.read_outputs()
 
     def read_outputs(self):
-        pattern = r'\@outputs.*\n'
+        pattern = r'\@outputs.*[\n]?'
         text = open(self.header_file(), "r").read()
         pt = re.search(pattern, text)[0]
         pt = pt.replace("@outputs", "").replace("\n", "").split(' ')

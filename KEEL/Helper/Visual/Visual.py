@@ -17,13 +17,13 @@ class Visual:
 
     def make_box(self):
         fig, ax = plt.subplots()
-        self.load.data()[self.load.inputs].plot(kind='box', subplots=False, sharex=True, sharey=True)
+        self.load.data[self.load.inputs].plot(kind='box', subplots=False, sharex=True, sharey=True)
         plt.savefig("Data/Visual/box.png", bbox_inches='tight')
         plt.close(fig)
 
     def make_scatter_matrix(self):
         fig, ax = plt.subplots()
-        scatter_matrix(self.load.data()[self.load.inputs], diagonal='kde')
+        scatter_matrix(self.load.data[self.load.inputs], diagonal='kde')
         plt.savefig("Data/Visual/scatter_matrix.png", bbox_inches='tight')
         plt.close(fig)
 

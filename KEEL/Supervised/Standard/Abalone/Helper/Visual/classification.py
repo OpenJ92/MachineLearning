@@ -7,6 +7,7 @@ class VClassification(Visual):
     def __init__(self, Load):
         assert isinstance(Load, Classification)
         super().__init__(Load)
+        super().construct_figures()
         self.construct_figures()
 
     def construct_figures(self):
@@ -16,13 +17,13 @@ class VClassification(Visual):
 
     def make_parallel_coordinates(self):
         fig, ax = plt.subplots()
-        parallel_coordinates(self.load.data(), *self.load.outputs)
+        parallel_coordinates(self.load.data, *self.load.outputs)
         plt.savefig("Data/Visual/parallel_coordinates.png", bbox_inches='tight')
         plt.close(fig)
 
     def make_andrews_curves(self):
         fig, ax = plt.subplots()
-        andrews_curves(self.load.data(),*self.load.outputs)
+        andrews_curves(self.load.data,*self.load.outputs)
         plt.savefig("Data/Visual/andrews_curves.png", bbox_inches='tight')
         plt.close(fig)
 

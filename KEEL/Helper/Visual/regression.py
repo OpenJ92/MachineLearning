@@ -16,13 +16,13 @@ class VRegression(Visual):
 
     def make_parallel_coordinates(self):
         fig, ax = plt.subplots()
-        parallel_coordinates(self.load.data(), class_column=None)
+        parallel_coordinates(self.load.data, class_column=None)
         plt.savefig("Data/Visual/parallel_coordinates.png", bbox_inches='tight')
         plt.close(fig)
 
     def make_andrews_curves(self, puts):
         fig, ax = plt.subplots()
-        andrews_curves(self.load.data()[puts], class_column=None)
+        andrews_curves(self.load.data[puts], class_column=None)
         plt.savefig(f"Data/Visual/{puts}_andrews_curves.png", bbox_inches='tight')
         plt.close(fig)
 

@@ -7,7 +7,7 @@ class Classification(Supervised):
         self.type = "m" if len(self.outputs) else "s"
 
     def class_balance(self):
-        return self.data().groupby(self.outputs).size()
+        return self.data.groupby(self.outputs).size()
 
     def integrate_dummies(self):
-        return pd.get_dummies(self.data()[self.outputs].astype(str), drop_first=True)
+        return pd.get_dummies(self.data[self.outputs].astype(str), drop_first=True)
