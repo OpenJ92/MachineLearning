@@ -33,13 +33,12 @@ class Base_Load:
         pt = pt.replace("@inputs", "").replace("\n", "").split(' ')
         pt = [i.replace(" ", "").replace(",", "") for i in pt]
         return pt[1:]
-    
+
     def replace_object_columns(self, data):
         for col in data.columns:
             if data[col].dtype == np.object:
                 unique_obj = data[col].unique()
                 data[col] = data[col].replace(unique_obj, list(range(len(unique_obj))))
-                import pdb;pdb.set_trace()
         return data
 
     def construct_data(self):

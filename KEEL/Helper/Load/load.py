@@ -33,7 +33,7 @@ class Base_Load:
         pt = pt.replace("@inputs", "").replace("\n", "").split(' ')
         pt = [i.replace(" ", "").replace(",", "") for i in pt]
         return pt[1:]
-    
+
     def replace_object_columns(self, data):
         for col in data.columns:
             if data[col].dtype == np.object:

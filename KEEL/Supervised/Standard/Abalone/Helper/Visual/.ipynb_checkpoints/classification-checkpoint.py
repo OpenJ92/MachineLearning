@@ -7,10 +7,9 @@ class VClassification(Visual):
     def __init__(self, Load):
         assert isinstance(Load, Classification)
         super().__init__(Load)
-        super().construct_figures()
+        self.construct_figures()
 
     def construct_figures(self):
-        print("In Classification-construct_figures")
         self.make_parallel_coordinates()
         self.make_andrews_curves()
         self.make_class_balance()
