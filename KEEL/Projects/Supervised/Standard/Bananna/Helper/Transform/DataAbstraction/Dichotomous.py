@@ -1,5 +1,5 @@
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import Binarizer, LabelBinarizer, OneHotEncoder
+from sklearn.preprocessing import Binaizer, LabelBinarizer, OneHotEncoder
 from Helper.Transform.Selector.NumberSelector import NumberSelector
 from Helper.Transform.Selector.TextSelector import TextSelector
 

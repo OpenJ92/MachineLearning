@@ -1,9 +1,9 @@
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import Binarizer, LabelBinarizer, OneHotEncoder
+from sklearn.preprocessing import MultiLabelBinazer, OneHotEncoder
 from Helper.Transform.Selector.NumberSelector import NumberSelector
 from Helper.Transform.Selector.TextSelector import TextSelector
 
-class Dichotomous:
+class Nominal:
     def __init__(self, name, abstraction, selector, bounds):
         self.name = name
         self.abstraction = abstraction
@@ -15,4 +15,4 @@ class Dichotomous:
 
     def pipline(self):
         return Pipeline([('selector', self.selector[self.name]),
-                         ('transform', Binaizer())])
+                         ('transform', OneHotEncoder())])
