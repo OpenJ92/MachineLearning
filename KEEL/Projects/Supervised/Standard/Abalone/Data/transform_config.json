@@ -1,16 +1,94 @@
 {
   "attribute" : 
-    {
-      "Sex":              {"name": ,"abstraction": ,"type": ,"func": ,"params":},
-      "Length":           {"name": ,"abstraction": ,"type": ,"func": ,"params":},
-      "Diameter":         {"name": ,"abstraction": ,"type": ,"func": ,"params":},
-      "Height":           {"name": ,"abstraction": ,"type": ,"func": ,"params":},
-      "Whole_weight":     {"name": ,"abstraction": ,"type": ,"func": ,"params":},
-      "Shucked_weight":   {"name": ,"abstraction": ,"type": ,"func": ,"params":},
-      "Viscera_weight":   {"name": ,"abstraction": ,"type": ,"func": ,"params":},
-      "Shell_weight":     {"name": ,"abstraction": ,"type": ,"func": ,"params":},
-      "Rings":            {"name": ,"abstraction": ,"type": ,"func": ,"params":}
-    },
-   "inputs" : [Sex, Length, Diameter, Height, Whole_weight, Shucked_weight, Viscera_weight, Shell_weight],
-   "outputs" : [Rings]
+   {
+     "Sex":
+        {
+          "name": "Sex",
+          "abstraction": "Nominal",
+          "type": "Text",
+          "func": "OneHotEncoder",
+          "params": []
+        },
+     "Length":
+        {
+          "name": "Length",
+          "abstraction": "Continuous",
+          "type": "Number",
+          "func": "StandardScalar",
+          "params": []
+        },
+     "Diameter":
+        {
+          "name": "Diameter",
+          "abstraction": "Continuous",
+          "type": "Number",
+          "func": "StandardScaler",
+          "params": []
+        },
+     "Height":
+        {
+          "name": "Height",
+          "abstraction": "Continuous",
+          "type": "Number",
+          "func": "StandardScaler",
+          "params": []
+        },
+     "Whole_weight":
+        {
+          "name": "Whole_weight",
+          "abstraction": "Continuous",
+          "type": "Number",
+          "func": "StandardScaler",
+          "params": []
+        },
+     "Shucked_weight":
+        {
+          "name": "Shucked_weight",
+          "abstraction": "Continuous",
+          "type": "Number",
+          "func": "StandardScaler",
+          "params": []
+        },
+     "Viscera_weight":
+        {
+          "name": "Viscera_weight",
+          "abstraction": "Continuous",
+          "type": "Number",
+          "func": "StandardScaler",
+          "params": []
+        },
+     "Shell_weight":
+        {
+          "name": "Shell_weight",
+          "abstraction": "Continuous",
+          "type": "Number",
+          "func": "StandardScaler",
+          "params": []
+        },
+     "Rings":
+        {
+          "name": "Rings",
+          "abstraction": "Nominal",
+          "type": "Number",
+          "func": "OneHotEncoder",
+          "params": []
+        }
+   }
+   ,
+   "inputs" :
+   [
+      Sex,
+      Length,
+      Diameter,
+      Height,
+      Whole_weight,
+      Shucked_weight,
+      Viscera_weight,
+      Shell_weight
+   ]
+   ,
+   "outputs" :
+   [
+      Rings
+   ]
 }
