@@ -34,6 +34,11 @@ class Base_Load:
         pt = [i.replace(" ", "").replace(",", "") for i in pt]
         return pt[1:]
 
+    def attribute_dictionary(self):
+        dictionary = {}
+        for attribute in self.attributes:
+            dictionary[attribute[1]] = {"name":attribute[1], "abstraction":attribute[2], "selector":attribute[3], "bounds":attribute[4]}
+
     def replace_object_columns(self, data):
         for col in data.columns:
             if data[col].dtype == np.object:

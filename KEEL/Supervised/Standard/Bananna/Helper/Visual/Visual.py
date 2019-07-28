@@ -6,7 +6,6 @@ class Visual:
     def __init__(self, Load):
         self.load = Load
         self.mpl_config()
-        self.construct_figures()
 
     def mpl_config(self):
         plt.rcParams["figure.figsize"] = (20,10)
