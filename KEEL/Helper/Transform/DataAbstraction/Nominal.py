@@ -14,5 +14,5 @@ class Nominal:
         return {"Number":NumberSelector, "Text":TextSelector}
 
     def pipline(self):
-        return Pipeline([('selector', self.selector[self.name]),
+        return Pipeline([('selector', self.selector(self.name)),
                          ('transform', OneHotEncoder())])

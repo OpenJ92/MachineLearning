@@ -1,4 +1,5 @@
 from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OrdinalEncoder
 from Helper.Transform.Selector.NumberSelector import NumberSelector
 from Helper.Transform.Selector.TextSelector import TextSelector
 
@@ -13,5 +14,5 @@ class Ordinal:
         return {"Number":NumberSelector, "Text":TextSelector}
 
     def pipline(self):
-        return Pipeline([('selector', self.selector[self.name]),
-                         ('transform', None)])
+        return Pipeline([('selector', self.selector(self.name)),
+                         ('transform', OrdinalEncoder())])

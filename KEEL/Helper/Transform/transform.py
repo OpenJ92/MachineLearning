@@ -20,5 +20,5 @@ class Base_Transform:
         for column in self.inputs:
             column_dict = self.attributes[column]
             A = self.abstraction_dictionary()[column_dict["abstraction"]](**column_dict)
-            piplines.append(A.pipline)
+            piplines.append(A.pipline())
         return piplines

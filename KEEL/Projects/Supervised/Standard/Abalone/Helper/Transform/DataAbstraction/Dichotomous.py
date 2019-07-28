@@ -14,5 +14,5 @@ class Dichotomous:
         return {"Number":NumberSelector, "Text":TextSelector}
 
     def pipline(self):
-        return Pipeline([('selector', self.selector[self.name]),
-                         ('transform', Binaizer())])
+        return Pipeline([('selector', self.selector(self.name)),
+                         ('transform', Binarizer())])
