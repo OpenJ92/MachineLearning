@@ -9,3 +9,4 @@ mv $dat $path$name/Data/$dat;
 mv $txt $path$name/Data/$txt;
 cp -r Helper/ $path$name/Helper/;
 cd $path$name; touch __init__.py; unzip Data/$dat -d Data/;
+touch Data/transform_config.json

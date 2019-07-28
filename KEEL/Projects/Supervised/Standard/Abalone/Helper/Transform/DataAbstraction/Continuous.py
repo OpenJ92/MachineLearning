@@ -15,5 +15,5 @@ class Continuous:
         return {"Number":NumberSelector, "Text":TextSelector}
 
     def pipline(self):
-        return Pipeline([('selector', self.selector(self.name)),
-                         ('transform', StandardScaler())])
+        return Pipeline([(f'{self.name}_selector', self.selector(self.name)),
+                         (f'{self.abstraction}_transform', StandardScaler())])

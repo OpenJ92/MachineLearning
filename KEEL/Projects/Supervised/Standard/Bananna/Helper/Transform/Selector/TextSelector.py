@@ -8,4 +8,4 @@ class TextSelector(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, X):
-        return X[self.key]
+        return X[[self.key]]

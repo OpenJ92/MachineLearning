@@ -48,6 +48,5 @@ class Base_Load:
         return data
 
     def construct_data(self):
-        data = self.data()
-        return self.replace_object_columns(data)
+        return self.data()
 

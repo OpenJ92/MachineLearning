@@ -1,5 +1,5 @@
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import Binaizer, LabelBinarizer, OneHotEncoder
+from sklearn.preprocessing import Binarizer, LabelBinarizer, OneHotEncoder
 from Helper.Transform.Selector.NumberSelector import NumberSelector
 from Helper.Transform.Selector.TextSelector import TextSelector
 
@@ -14,5 +14,5 @@ class Dichotomous:
         return {"Number":NumberSelector, "Text":TextSelector}
 
     def pipline(self):
-        return Pipeline([('selector', self.selector[self.name]),
-                         ('transform', Binaizer())])
+        return Pipeline([(f'{self.name}_selector', self.selector(self.name)),
+                         (f'{self.abstraction}_transform', Binarizer())])

@@ -1,0 +1,16 @@
+{
+  "attribute" : 
+    {
+      "Sex":              {"name": ,"abstraction": ,"type": ,"func": ,"params":},
+      "Length":           {"name": ,"abstraction": ,"type": ,"func": ,"params":},
+      "Diameter":         {"name": ,"abstraction": ,"type": ,"func": ,"params":},
+      "Height":           {"name": ,"abstraction": ,"type": ,"func": ,"params":},
+      "Whole_weight":     {"name": ,"abstraction": ,"type": ,"func": ,"params":},
+      "Shucked_weight":   {"name": ,"abstraction": ,"type": ,"func": ,"params":},
+      "Viscera_weight":   {"name": ,"abstraction": ,"type": ,"func": ,"params":},
+      "Shell_weight":     {"name": ,"abstraction": ,"type": ,"func": ,"params":},
+      "Rings":            {"name": ,"abstraction": ,"type": ,"func": ,"params":}
+    },
+   "inputs" : [Sex, Length, Diameter, Height, Whole_weight, Shucked_weight, Viscera_weight, Shell_weight],
+   "outputs" : [Rings]
+}
