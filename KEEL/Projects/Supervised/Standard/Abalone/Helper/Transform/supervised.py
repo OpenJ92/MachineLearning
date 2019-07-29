@@ -1,4 +1,5 @@
 from sklearn.pipeline import Pipeline
+from Helper.Transform.Columns.columns import Column_pipeline_Dictionary
 from Helper.Transform.transform import Base_Transform
 
 class Supervised_Transform(Base_Transform):
@@ -7,9 +8,7 @@ class Supervised_Transform(Base_Transform):
         self.outputs = self.load.outputs
 
     def make_output_piplines(self):
-        piplines = []
-        for column in self.outputs:
-            column_dict = self.attributes[column]
-            A = self.abstraction_dictionary()[column_dict["abstraction"]](**column_dict)
-            piplines.append(A.pipline)
-        return piplines
+        pipelines = []
+        for pipeline in self.outputs:
+            pipelines.append(Column_pipeline_Dictionary[pipeline]._pipline())
+        return pipelines

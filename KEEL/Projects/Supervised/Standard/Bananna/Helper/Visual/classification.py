@@ -6,8 +6,9 @@ from pandas.plotting import parallel_coordinates, andrews_curves
 class VClassification(Visual):
     def __init__(self, Load):
         assert isinstance(Load, Classification)
-        super().__init__(Load)
-        super().construct_figures()
+        Visual.__init__(self,Load)
+        Visual.construct_figures(self)
+        self.construct_figures()
 
     def construct_figures(self):
         print("In Classification-construct_figures")
