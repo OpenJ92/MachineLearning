@@ -1,0 +1,44 @@
+{
+    "attribute": {
+        "Age": {
+            "name": "Age",
+            "abstraction": "Ordinal",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
+        },
+        "Year": {
+            "name": "Year",
+            "abstraction": "Ordinal",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
+        },
+        "Positive": {
+            "name": "Positive",
+            "abstraction": "Ordinal",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
+        },
+        "Survival": {
+            "name": "Survival",
+            "abstraction": "Dichotomous",
+            "selector": "Text",
+            "bounds": null,
+            "func": null,
+            "params": null
+        }
+    },
+    "inputs": [
+        "Age",
+        "Year",
+        "Positive"
+    ],
+    "outputs": [
+        "Survival"
+    ]
+}
