@@ -1,6 +1,6 @@
 from sklearn.pipeline import Pipeline
-from Helper.Transform.Columns.columns import Column_pipeline_Dictionary
-from Helper.Transform.transform import Base_Transform
+from Data.columns import Column_pipeline_Dictionary
+from Helper.Transform.Transform.transform import Base_Transform
 
 class Supervised_Transform(Base_Transform):
     def __init__(self, Load):

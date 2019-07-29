@@ -1,5 +1,5 @@
 from sklearn.pipeline import Pipeline
-from Helper.Transform.Columns.columns import Column_pipeline_Dictionary
+from Data.columns import Column_pipeline_Dictionary
 from Helper.Transform.transform import Base_Transform
 
 class Supervised_Transform(Base_Transform):
