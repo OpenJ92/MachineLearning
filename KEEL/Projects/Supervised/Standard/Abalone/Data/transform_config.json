@@ -1,94 +1,89 @@
 {
-  "attribute" : 
-   {
-     "Sex":
-        {
-          "name": "Sex",
-          "abstraction": "Nominal",
-          "type": "Text",
-          "func": "OneHotEncoder",
-          "params": []
+    "attribute": {
+        "Sex": {
+            "name": "Sex",
+            "abstraction": "Nominal",
+            "selector": "Text",
+            "bounds": null,
+            "func": null,
+            "params": null
         },
-     "Length":
-        {
-          "name": "Length",
-          "abstraction": "Continuous",
-          "type": "Number",
-          "func": "StandardScalar",
-          "params": []
+        "Length": {
+            "name": "Length",
+            "abstraction": "Continuous",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
         },
-     "Diameter":
-        {
-          "name": "Diameter",
-          "abstraction": "Continuous",
-          "type": "Number",
-          "func": "StandardScaler",
-          "params": []
+        "Diameter": {
+            "name": "Diameter",
+            "abstraction": "Continuous",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
         },
-     "Height":
-        {
-          "name": "Height",
-          "abstraction": "Continuous",
-          "type": "Number",
-          "func": "StandardScaler",
-          "params": []
+        "Height": {
+            "name": "Height",
+            "abstraction": "Continuous",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
         },
-     "Whole_weight":
-        {
-          "name": "Whole_weight",
-          "abstraction": "Continuous",
-          "type": "Number",
-          "func": "StandardScaler",
-          "params": []
+        "Whole_weight": {
+            "name": "Whole_weight",
+            "abstraction": "Continuous",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
         },
-     "Shucked_weight":
-        {
-          "name": "Shucked_weight",
-          "abstraction": "Continuous",
-          "type": "Number",
-          "func": "StandardScaler",
-          "params": []
+        "Shucked_weight": {
+            "name": "Shucked_weight",
+            "abstraction": "Continuous",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
         },
-     "Viscera_weight":
-        {
-          "name": "Viscera_weight",
-          "abstraction": "Continuous",
-          "type": "Number",
-          "func": "StandardScaler",
-          "params": []
+        "Viscera_weight": {
+            "name": "Viscera_weight",
+            "abstraction": "Continuous",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
         },
-     "Shell_weight":
-        {
-          "name": "Shell_weight",
-          "abstraction": "Continuous",
-          "type": "Number",
-          "func": "StandardScaler",
-          "params": []
+        "Shell_weight": {
+            "name": "Shell_weight",
+            "abstraction": "Continuous",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
         },
-     "Rings":
-        {
-          "name": "Rings",
-          "abstraction": "Nominal",
-          "type": "Number",
-          "func": "OneHotEncoder",
-          "params": []
+        "Rings": {
+            "name": "Rings",
+            "abstraction": "Nominal",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
         }
-   }
-   ,
-   "inputs" :
-   [
-      Sex,
-      Length,
-      Diameter,
-      Height,
-      Whole_weight,
-      Shucked_weight,
-      Viscera_weight,
-      Shell_weight
-   ]
-   ,
-   "outputs" :
-   [
-      Rings
-   ]
+    },
+    "inputs": [
+        "Sex",
+        "Length",
+        "Diameter",
+        "Height",
+        "Whole_weight",
+        "Shucked_weight",
+        "Viscera_weight",
+        "Shell_weight"
+    ],
+    "outputs": [
+        "Rings"
+    ]
 }

@@ -4,7 +4,7 @@ from Helper.Transform.Selector.NumberSelector import NumberSelector
 from Helper.Transform.Selector.TextSelector import TextSelector
 
 class Ordinal:
-    def __init__(self, name, abstraction, selector, bounds):
+    def __init__(self, name, abstraction, selector, bounds, func, params):
         self.name = name
         self.abstraction = abstraction
         self.selector = self.selector_dictionary()[selector]
@@ -15,4 +15,4 @@ class Ordinal:
 
     def pipline(self):
         return Pipeline([(f'{self.name}_selector', self.selector(self.name)),
-                         (f'{self.abstraction}transform', OrdinalEncoder())])
+                         (f'{self.abstraction}transform', OrdinalEncoder(*[]))])

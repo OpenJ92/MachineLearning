@@ -1,0 +1,35 @@
+{
+    "attribute": {
+        "At1": {
+            "name": "At1",
+            "abstraction": "Continuous",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
+        },
+        "At2": {
+            "name": "At2",
+            "abstraction": "Continuous",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
+        },
+        "Class": {
+            "name": "Class",
+            "abstraction": "Nominal",
+            "selector": "Number",
+            "bounds": null,
+            "func": null,
+            "params": null
+        }
+    },
+    "inputs": [
+        "At1",
+        "At2"
+    ],
+    "outputs": [
+        "Class"
+    ]
+}

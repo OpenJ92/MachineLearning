@@ -5,7 +5,7 @@ from Helper.Transform.Selector.NumberSelector import NumberSelector
 from Helper.Transform.Selector.TextSelector import TextSelector
 
 class Continuous:
-    def __init__(self, name, abstraction, selector, bounds):
+    def __init__(self, name, abstraction, selector, bounds, func, params):
         self.name = name
         self.abstraction = abstraction
         self.selector = self.selector_dictionary()[selector]
@@ -16,4 +16,4 @@ class Continuous:
 
     def pipline(self):
         return Pipeline([(f'{self.name}_selector', self.selector(self.name)),
-                         (f'{self.abstraction}_transform', StandardScaler())])
+                         (f'{self.abstraction}_transform', StandardScaler(*[]))])
