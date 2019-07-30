@@ -18,4 +18,7 @@ class Classificaton_Transform(Supervised_Transform):
         inputs_pipeline = Pipeline([("inputs", FeatureUnion(list(zip(self.inputs, self.make_input_piplines()))))])
         outputs_pipeline = Pipeline([("outputs", FeatureUnion(list(zip(self.outputs, self.make_output_piplines()))))])
         return inputs_pipeline, outputs_pipeline
+    
+    def featureU(self):
+        return FeatureUnion([("inputs_",self.inputs_pipeline),("outputs_",self.outputs_pipeline)])
 
