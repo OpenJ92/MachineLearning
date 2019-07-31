@@ -1,15 +1,11 @@
 from Helper.Transform.Transform.supervised import  Supervised_Transform
 from sklearn.pipeline import FeatureUnion, Pipeline
-import pandas as pd
 
 class Classificaton_Transform(Supervised_Transform):
     def __init__(self, Load):
         Supervised_Transform.__init__(self, Load)
-        self.load = Load
-        self.class_balance = self.load.class_balance
         self.inputs_pipeline, self.outputs_pipeline = self.assemble_pipelines()
         self._fit()
-        self.data = self.visual_data()
 
     def _fit(self):
         self.inputs_pipeline.fit(self.load.partition.X_train)
@@ -25,8 +21,4 @@ class Classificaton_Transform(Supervised_Transform):
     
     def featureU(self):
         return FeatureUnion([("inputs_",self.inputs_pipeline),("outputs_",self.outputs_pipeline)])
-
-    def visual_data(self):
-        data = pd.merge(self.load.partition.X_train, self.load.partition.y_train, left_index=True, right_index=True)
-        return pd.DataFrame(self.featureU().transform(data), columns=data.columns)
 

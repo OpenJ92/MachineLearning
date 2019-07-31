@@ -7,8 +7,8 @@ from Helper.Transform.Custom.nominal import _LabelBinarizer
 from sklearn.preprocessing import KBinsDiscretizer
 
 _Age = {"n_bins": 15, "encode": "ordinal", "strategy": "uniform"}
-_Year = {"n_bins": 15, "encode": "ordinal", "strategy": "uniform"}
-_Positive = {"n_bins": 15, "encode": "ordinal", "strategy": "uniform"}
+_Year = {"n_bins": 10, "encode": "ordinal", "strategy": "uniform"}
+_Positive = {"n_bins": 5, "encode": "ordinal", "strategy": "uniform"}
 _Survival = {}
 
 Age = column_pipeline("Age", NumberSelector, KBinsDiscretizer, _Age)
