@@ -11,3 +11,6 @@ class Base_Transform:
         for pipeline in self.inputs:
             pipelines.append(Column_pipeline_Dictionary[pipeline]._pipline())
         return pipelines
+
+    def make_global_input_pipeline(self):
+        pass
