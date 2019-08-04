@@ -2,7 +2,7 @@ from Helper.Transform.Selector.NumberSelector import NumberSelector
 from Helper.Transform.Selector.TextSelector import TextSelector
 from Helper.Transform.Columns.column_pipeline import column_pipeline
 
-from Helper.Transform.Custom.nominal import _LabelBinarizer, _Identity
+from Helper.Transform.Custom.nominal import _Identity
 
 _ClumpThickness = {}
 _CellSize = {}
