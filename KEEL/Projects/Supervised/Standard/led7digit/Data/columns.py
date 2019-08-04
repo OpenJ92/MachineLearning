@@ -2,7 +2,7 @@ from Helper.Transform.Selector.NumberSelector import NumberSelector
 from Helper.Transform.Selector.TextSelector import TextSelector
 from Helper.Transform.Columns.column_pipeline import column_pipeline
 
-from Helper.Transform.Custom.nominal import _LabelBinarizer
+from Helper.Transform.Custom.nominal import _LabelBinarizer, _Identity
 
 _Led1 = {}
 _Led2 = {}
@@ -20,7 +20,7 @@ Led4 = column_pipeline("Led4", NumberSelector, _LabelBinarizer, _Led4)
 Led5 = column_pipeline("Led5", NumberSelector, _LabelBinarizer, _Led5)
 Led6 = column_pipeline("Led6", NumberSelector, _LabelBinarizer, _Led6)
 Led7 = column_pipeline("Led7", NumberSelector, _LabelBinarizer, _Led7)
-number = column_pipeline("Number", NumberSelector, _LabelBinarizer, _number)
+number = column_pipeline("Number", NumberSelector,_Identity, _number)
 
 Column_pipeline_Dictionary = {
         "Led1":Led1,
