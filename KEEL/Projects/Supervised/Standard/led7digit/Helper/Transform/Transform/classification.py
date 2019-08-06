@@ -28,6 +28,5 @@ class Classificaton_Transform(Supervised_Transform):
 
     def visual_data(self):
         data = pd.merge(self.load.partition.X_train, self.load.partition.y_train, left_index=True, right_index=True)
-        import pdb;pdb.set_trace()
         return pd.DataFrame(self.featureU().transform(data), columns=data.columns)
 

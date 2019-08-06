@@ -23,7 +23,7 @@ class VClassification(Visual):
 
     def make_andrews_curves(self):
         fig, ax = plt.subplots()
-        andrews_curves(self.load.data,*self.load.outputs)
+        andrews_curves(self.load.data,*self.load.outputs, colormap="Paired")
         plt.savefig(f"Data/Visual/{self.load}_andrews_curves.png", bbox_inches='tight')
         plt.close(fig)
 

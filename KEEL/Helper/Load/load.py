@@ -9,14 +9,18 @@ class Base_Load:
         self.datafile = datafile
         self.headerfile = headerfile
         self.inputs, self.attributes = self.read_inputs(), self.read_attributes()
-        #self.inputs, self.attributes = self.read_transform_config()["inputs"], self.read_transform_config()["attribute"]
-        self.data = self.construct_data()
+        self.data, self.data_with_null = self.construct_data()
 
     def _data(self):
-        return pd.read_csv(f"{self.dir}/{self.datafile}", sep='\s*,\s*', engine='python')
+        df = pd.read_csv(f"{self.dir}/{self.datafile}",
+                         sep='\s*,\s*',
+                         engine='python',
+                         na_values="<null>")
+        not_null = df.isnull().any(axis=1)
+        return df[~not_null], df[not_null]
 
     def describe(self):
-        return self.data().describe()
+        return self.data.describe()
 
     def header_file(self):
         return f"{self.dir}/{self.headerfile}"
@@ -44,7 +48,7 @@ class Base_Load:
     def attribute_dictionary(self):
         dictionary = {}
         for attribute in self.attributes:
-            dictionary[attribute[1]] = {"name":attribute[1], "abstraction":attribute[2], "selector":attribute[3], "bounds":attribute[4]}
+            dictionary[attribute[1]] = {"name":attribute[1], "bounds":attribute[3]}
         return dictionary
 
     def construct_data(self):

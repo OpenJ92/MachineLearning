@@ -13,13 +13,16 @@ class Train:
         self.pipeline_params = self.pipeline.get_params()
 
     def construct_pipeline(self):
-        return Pipeline([(f"pipeline", self.transform.inputs_pipeline),
+        return Pipeline([(f"inputs_pipeline", self.transform.inputs_pipeline),
                          (f"estimator", self.model())])
 
     def construct_GSCV(self, hyperparameters):
         return GridSearchCV(self.pipeline, hyperparameters, cv=10)
 
-    def fit_GSCV(self):
+    def fit_GSCV(self, hyperparameters):
         X = self.load.partition.X_train
-        y_values = self.transform.outputs_pipeline.transform(self.load.partition.y_train)
-        y = pd.DataFrame(y_values)
+        y = self.load.partition.y_train.values.ravel()
+        GridSearch = self.construct_GSCV(hyperparameters)
+        GridSearch.fit(X, y)
+        GridSearch.refit
+        return GridSearch
