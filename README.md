@@ -5,3 +5,4 @@
 [Bananna](KEEL/Projects/Supervised/Standard/Bananna/)  
 [Haberman](KEEL/Projects/Supervised/Standard/Haberman/)  
 [Abaone](KEEL/Projects/Supervised/Standard/Abalone/)  
+[wisconsim](KEEL/Projects/Supervised/Standard/wisconsin/)  
