@@ -12,5 +12,5 @@ class Base_Transform:
             pipelines.append(self.columns[pipeline]._pipline())
         return pipelines
 
-    def make_global_input_pipeline(self):
+    def make_global_pipelines(self):
         pass

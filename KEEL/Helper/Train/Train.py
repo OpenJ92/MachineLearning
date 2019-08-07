@@ -11,6 +11,7 @@ class Train:
         self.load = Load
         self.hyperparameters = hyperparameters
         self.columns = columns
+        self.global_ = None
         self.transform = Transform(self.load)
         self.pipeline = self.construct_pipeline()
         self.pipeline_params = self.pipeline.get_params()
@@ -25,7 +26,8 @@ class Train:
     def fit_GSCV(self, hyperparameters):
         X = self.load.partition.X_train
         y = self.load.partition.y_train.values.ravel()
-        GridSearch = self.construct_GSCV(hyperparameters)
+        GridSearch = self.construct_GSCV()
         GridSearch.fit(X, y)
         GridSearch.refit
+        self.clf = GridSearch
         return GridSearch
