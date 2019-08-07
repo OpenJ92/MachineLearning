@@ -1,4 +1,23 @@
 
+LED Display Domain data set
+
+Description.
+
+This simple domain contains 7 Boolean attributes, one for each light-emitting diode of a 7-segment display. The task is to determine which digit is been shown in the display. The problem would be easy if not for the introduction of noise. In this case, each attribute value has the 10% probability of having its value inverted.  
+
+@attribute Led1 integer [0, 1]  
+@attribute Led2 integer [0, 1]  
+@attribute Led3 integer [0, 1]  
+@attribute Led4 integer [0, 1]  
+@attribute Led5 integer [0, 1]  
+@attribute Led6 integer [0, 1]  
+@attribute Led7 integer [0, 1]  
+@attribute Number {0,1,2,3,4,5,6,7,8,9}  
+@inputs Led1, Led2, Led3, Led4, Led5, Led6, Led7  
+@outputs Number  
+
+The following experiment makes use of sklearn.ensemble RandomForestClassifier.
+
 
 ```python
 from Helper.Load.classification import Classification
