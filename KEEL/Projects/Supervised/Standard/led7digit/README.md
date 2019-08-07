@@ -27,9 +27,14 @@ from Data.hyperparameters import hyperparameters
 trainC = Train(loadC, Classificaton_Transform, RandomForestClassifier)
 ```
 
+<img src="Data/Visual/Andrew.png">
+Andrew Curve displaying raw data.
+
+<img src="Data/Visual/ClassBalance.png">
+
 
 ```python
-loadC.data.head()
+#loadC.data.head()
 transformC.data.head()
 ```
 
