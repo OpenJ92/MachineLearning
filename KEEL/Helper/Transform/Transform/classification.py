@@ -3,11 +3,12 @@ from sklearn.pipeline import FeatureUnion, Pipeline
 import pandas as pd
 
 class Classificaton_Transform(Supervised_Transform):
-    def __init__(self, Load):
-        Supervised_Transform.__init__(self, Load)
+    def __init__(self, Load, columns):
+        Supervised_Transform.__init__(self, Load, columns)
         self.load = Load
         self.class_balance = self.load.class_balance
         self.inputs_pipeline, self.outputs_pipeline = self.assemble_pipelines()
+        self.global_pipeline = None
         self._fit()
         self.data = self.visual_data()
 
@@ -21,6 +22,7 @@ class Classificaton_Transform(Supervised_Transform):
     def assemble_pipelines(self):
         inputs_pipeline = Pipeline([("inputs", FeatureUnion(list(zip(self.inputs, self.make_input_piplines()))))])
         outputs_pipeline = Pipeline([("outputs", FeatureUnion(list(zip(self.outputs, self.make_output_piplines()))))])
+        global_pipeline = None
         return inputs_pipeline, outputs_pipeline
     
     def featureU(self):
