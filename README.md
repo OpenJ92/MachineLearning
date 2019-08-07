@@ -1,5 +1,5 @@
 # MachineLearning
-<img src="Projects/Supervised/Standard/wisconsin/Data/Visual/andrews_curves.png">
+<img src="KEEL/Projects/Supervised/Standard/wisconsin/Data/Visual/andrews_curves.png">
 
 ## Supervised Learning Projects
 ### KEEL
