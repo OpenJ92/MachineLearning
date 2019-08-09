@@ -12,13 +12,13 @@ class Train:
         self.hyperparameters = hyperparameters
         self.columns = columns
         self.global_ = global_
-        self.transform = Transform(self.load, self.columns)
+        self.transform = Transform(self.load, self.columns, self.global_)
         self.pipeline = self.construct_pipeline()
         self.pipeline_params = self.pipeline.get_params()
 
     def construct_pipeline(self):
         return Pipeline([(f"inputs_pipeline", self.transform.inputs_pipeline),
-                         (f"global", self.global_()),
+                         (f"global", self.transform.globals_pipeline),
                          (f"estimator", self.model())])
 
     def construct_GSCV(self):
