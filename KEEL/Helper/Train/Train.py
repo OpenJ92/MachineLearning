@@ -1,23 +1,24 @@
 import pandas as pd
+from sklearn.decomposition import PCA
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
 
-from Helper.Transform.Transform.classification import Classification_Transform
 from Helper.Load.load import *
 
 class Train:
-    def __init__(self, Load, Model, Transform, columns=None, hyperparameters=None):
+    def __init__(self, Load, Model, Transform, columns=None, global_=PCA, hyperparameters=None):
         self.model = Model
         self.load = Load
         self.hyperparameters = hyperparameters
         self.columns = columns
-        self.global_ = None
-        self.transform = Transform(self.load)
+        self.global_ = global_
+        self.transform = Transform(self.load, self.columns)
         self.pipeline = self.construct_pipeline()
         self.pipeline_params = self.pipeline.get_params()
 
     def construct_pipeline(self):
         return Pipeline([(f"inputs_pipeline", self.transform.inputs_pipeline),
+                         (f"global", self.global_()),
                          (f"estimator", self.model())])
 
     def construct_GSCV(self):
