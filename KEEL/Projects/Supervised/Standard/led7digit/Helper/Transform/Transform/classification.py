@@ -14,7 +14,7 @@ class Classificaton_Transform(Supervised_Transform):
     def _fit(self):
         self.inputs_pipeline.fit(self.load.partition.X_train)
         self.outputs_pipeline.fit(self.load.partition.y_train)
-        self.globals_pipeline.fit(self.inputs_pipeline.transform(self.load.partition.X_train))
+        self.globals_pipeline.fit(self.inputs_pipeline.transform(self.load.partition.X_train), self.load.partition.y_train)
 
     def _transform(self, X, y):
         return self.inputs_pipeline.transform(X), self.outputs_pipeline.transform(y)

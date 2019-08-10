@@ -24,7 +24,7 @@ class Train:
     def construct_GSCV(self):
         return GridSearchCV(self.pipeline, self.hyperparameters, cv=10)
 
-    def fit_GSCV(self, hyperparameters):
+    def fit_GSCV(self):
         X = self.load.partition.X_train
         y = self.load.partition.y_train.values.ravel()
         GridSearch = self.construct_GSCV()
