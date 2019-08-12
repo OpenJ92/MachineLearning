@@ -9,6 +9,11 @@
 2. [Bananna](KEEL/Projects/Supervised/Standard/Bananna/)  
 3. [Haberman](KEEL/Projects/Supervised/Standard/Haberman/)  
 4. [Abaone](KEEL/Projects/Supervised/Standard/Abalone/)  
-5. [wisconsim](KEEL/Projects/Supervised/Standard/wisconsin/)  
+5. [wisconsin](KEEL/Projects/Supervised/Standard/wisconsin/)  
    Breast Cancer Wisconsin (Original) data set  
    This dataset contains cases from a study that was conducted at the University of Wisconsin Hospitals, Madison, about patients who had undergone surgery for breast cancer. The task is to determine if the detected tumor is benign (2) os malignant (4).  
+6. [iris](KEEL/Projects/Supervised/iris/)  
+  Iris plants dataset
+  This is perhaps the best known database to be found in the pattern recognition literature. The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant. One class is linearly separable from the other 2; the latter are NOT linearly separable from each other. 
+
+
