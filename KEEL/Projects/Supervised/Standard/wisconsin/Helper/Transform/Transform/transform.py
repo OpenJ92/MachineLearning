@@ -1,16 +1,17 @@
 from sklearn.pipeline import Pipeline
-from Data.columns import Column_pipeline_Dictionary
 
 class Base_Transform:
-    def __init__(self, Load):
-        self.load = Load 
+    def __init__(self, Load, columns, global_):
+        self.load = Load
         self.inputs = self.load.inputs
+        self.columns = columns
+        self.global_ = global_
 
     def make_input_piplines(self):
         pipelines = []
         for pipeline in self.inputs:
-            pipelines.append(Column_pipeline_Dictionary[pipeline]._pipline())
+            pipelines.append(self.columns[pipeline]._pipline())
         return pipelines
 
-    def make_global_input_pipeline(self):
-        pass
+    def make_global_pipelines(self):
+        return self.global_()

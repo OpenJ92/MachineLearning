@@ -48,7 +48,7 @@ class Base_Load:
     def attribute_dictionary(self):
         dictionary = {}
         for attribute in self.attributes:
-            dictionary[attribute[1]] = {"name":attribute[1], "abstraction":attribute[2], "selector":attribute[3], "bounds":attribute[4]}
+            dictionary[attribute[1]] = {"name":attribute[1], "bounds":attribute[3]}
         return dictionary
 
     def construct_data(self):

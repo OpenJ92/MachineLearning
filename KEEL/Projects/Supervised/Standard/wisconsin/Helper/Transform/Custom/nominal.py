@@ -6,22 +6,20 @@ class _Identity(TransformerMixin):
     def __init__(self, *args, **kwargs):
         self.encoder = None 
 
-    def fit(self, x, y=None):
+    def fit(self, X, y=None):
         return self
 
-    def transform(self, x, y=None):
-        return x
+    def transform(self, X, y=None):
+        return X
 
 
 class _LabelBinarizer(TransformerMixin):
     def __init__(self, *args, **kwargs):
         self.encoder = LabelBinarizer(*args, **kwargs)
 
-    def fit(self, x, y=None):
-        self.encoder.fit(x)
+    def fit(self, X, y=None):
+        self.encoder.fit(X)
         return self
 
-    def transform(self, x, y=None):
-        return self.encoder.transform(x)
-
-
+    def transform(self, X, y=None):
+        return self.encoder.transform(X)
