@@ -6,13 +6,11 @@ from sklearn.model_selection import GridSearchCV
 from Helper.Load.load import *
 
 class Train:
-    def __init__(self, Load, Model, Transform, columns=None, global_=PCA, hyperparameters=None):
+    def __init__(self, Load, Model, Transform, hyperparameters=None):
         self.model = Model
         self.load = Load
+        self.transform = Transform
         self.hyperparameters = hyperparameters
-        self.columns = columns
-        self.global_ = global_
-        self.transform = Transform(self.load, self.columns, self.global_)
         self.pipeline = self.construct_pipeline()
         self.pipeline_params = self.pipeline.get_params()
 

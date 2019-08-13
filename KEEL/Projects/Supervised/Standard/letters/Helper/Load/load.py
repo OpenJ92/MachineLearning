@@ -32,11 +32,6 @@ class Base_Load:
         pt = [i.replace("@attributes", "").replace("\n", "").split(' ') for i in pt]
         return pt
 
-    def read_transform_config(self):
-        with open("Data/transform_config.json") as json_file:
-            data = json.load(json_file)
-        return data
-
     def read_inputs(self):
         pattern = r'\@inputs.*\n'
         text = open(self.header_file(), "r").read()
@@ -46,9 +41,9 @@ class Base_Load:
         return pt[1:]
 
     def attribute_dictionary(self):
-        dictionary = {}
+        dictionary = []
         for attribute in self.attributes:
-            dictionary[attribute[1]] = {"name":attribute[1], "bounds":attribute[3]}
+            dictionary.append({"name":attribute[1], "type": attribute[2], "bounds":attribute[3]})
         return dictionary
 
     def construct_data(self):
