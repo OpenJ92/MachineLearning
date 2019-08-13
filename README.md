@@ -15,7 +15,7 @@
 6. [iris](KEEL/Projects/Supervised/Standard/iris/)  
   Iris plants dataset  
   This is perhaps the best known database to be found in the pattern recognition literature. The data set contains 3 classes of 50 instances each, where each class refers to a type of iris plant. One class is linearly separable from the other 2; the latter are NOT linearly separable from each other.  
-7. [letters](KEEL/Projects/Supervised/letters/)
+7. [letters](KEEL/Projects/Supervised/Standard/letters/)
   Letter Recognition data set  
   The objective is to identify each of a large number of black-and-white rectangular pixel displays as one of the 26 capital letters in the English alphabet. The character images were based on 20 different fonts and each letter within these 20 fonts was randomly distorted to produce a file of 20,000 unique stimuli. Each stimulus was converted into 16 primitive numerical attributes (statistical moments and edge counts) which were then scaled to fit into a range of integer values from 0 through 15.  
 
