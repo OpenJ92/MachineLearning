@@ -16,6 +16,6 @@ inputs_number = column_pipeline(loadC.inputs, ColumnSelector, StandardScaler, co
 outputs = column_pipeline(*loadC.outputs, TextSelector, _Identity, outputs_)
 
 Column_ = {
-    "inputs_c":inputs_number,
+    "inputs":inputs_number,
     "output":outputs
 }

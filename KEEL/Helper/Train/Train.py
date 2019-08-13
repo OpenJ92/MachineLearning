@@ -30,3 +30,6 @@ class Train:
         GridSearch.refit
         self.clf = GridSearch
         return GridSearch
+
+    def make_experiment(self):
+        pass
