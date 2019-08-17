@@ -17,7 +17,7 @@ class Train:
     def construct_pipeline(self):
         return Pipeline([(f"inputs", self.transform.inputs_pipeline),
                          (f"global", self.transform.globals_pipeline),
-                         (f"estimator", self.model())])
+                         (f"estimator", self.model)])
 
     def construct_GSCV(self):
         return GridSearchCV(self.pipeline, self.hyperparameters, cv=10)

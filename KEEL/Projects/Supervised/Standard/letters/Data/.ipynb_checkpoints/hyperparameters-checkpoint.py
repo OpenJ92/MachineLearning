@@ -1,3 +1,5 @@
 hyperparameters = {
-    'global__globals__n_components': [1,2,3,7,10,15,20,25]
+    'global__globals__n_components': [25],
+    'estimator__min_samples_split': [2, 10, 20, 30, 40],
+    'estimator__max_depth': [2, 5, 10]
                   }

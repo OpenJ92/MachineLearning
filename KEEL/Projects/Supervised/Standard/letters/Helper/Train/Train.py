@@ -2,8 +2,11 @@ import pandas as pd
 from sklearn.decomposition import PCA
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
+from joblib import dump, load
+import os
 
-from Helper.Load.load import *
+from Helper.Visual.Load.classification import VClassification as loadVC
+from Helper.Visual.Transform.classification import VClassification as transformVC
 
 class Train:
     def __init__(self, Load, Model, Transform, hyperparameters=None):
@@ -17,7 +20,7 @@ class Train:
     def construct_pipeline(self):
         return Pipeline([(f"inputs", self.transform.inputs_pipeline),
                          (f"global", self.transform.globals_pipeline),
-                         (f"estimator", self.model())])
+                         (f"estimator", self.model)])
 
     def construct_GSCV(self):
         return GridSearchCV(self.pipeline, self.hyperparameters, cv=10)
@@ -30,3 +33,22 @@ class Train:
         GridSearch.refit
         self.clf = GridSearch
         return GridSearch
+
+    def make_experiment(self, name):
+        assert(self.clf != None)
+        dir_ = os.getcwd() + "/Experiments/" + name
+        os.mkdir(dir_)
+        os.mkdir(dir_ + "/Visual")
+        os.mkdir(dir_ + "/Model")
+        os.mkdir(dir_ + "/Markdown")
+        os.mkdir(dir_ + "/Data")
+        import pdb;pdb.set_trace()
+
+        loadVC(self.load, dir_)
+        transformVC(self.transform, dir_)
+
+        import pdb;pdb.set_trace()
+
+        dump(self.clf, f"{dir_}/Model/{name}.joblib")
+
+        import pdb;pdb.set_trace()

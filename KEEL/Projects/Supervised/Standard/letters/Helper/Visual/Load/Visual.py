@@ -3,8 +3,9 @@ from pandas.plotting import scatter_matrix
 
 
 class Visual:
-    def __init__(self, Load):
+    def __init__(self, Load, dir_ = "Data"):
         self.load = Load
+        self.dir_ = dir_
         self.mpl_config()
 
     def mpl_config(self):
@@ -18,13 +19,13 @@ class Visual:
     def make_box(self):
         fig, ax = plt.subplots()
         self.load.data[self.load.inputs].plot(kind='box', subplots=False, sharex=True, sharey=True)
-        plt.savefig(f"Data/Visual/{self.load}_make_box.png", bbox_inches='tight')
+        plt.savefig(f"{self.dir_}/Visual/load_make_box.png", bbox_inches='tight')
         plt.close(fig)
 
     def make_scatter_matrix(self):
         fig, ax = plt.subplots()
         scatter_matrix(self.load.data[self.load.inputs], diagonal='kde')
-        plt.savefig(f"Data/Visual/{self.load}_scatter_matrix.png", bbox_inches='tight')
+        plt.savefig(f"{self.dir_}/Visual/load_scatter_matrix.png", bbox_inches='tight')
         plt.close(fig)
 
 
