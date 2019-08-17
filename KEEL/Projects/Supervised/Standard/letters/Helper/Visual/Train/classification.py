@@ -6,8 +6,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 class VClassification:
-    def __init__(self, Train):
+    def __init__(self, Train, dir_ = "Data"):
         self.train = Train
+        self.dir_ = dir_
         self.load = self.train.load
 
     def construct_confusion_matrix(self):
@@ -19,9 +20,10 @@ class VClassification:
         im, cbar = heatmap(cm, class_, class_, ax, cmap="terrain", cbarlabel="Support")
         texts = annotate_heatmap(im, valfmt="{x:.1f} t")
         fig.tight_layout()
-        plt.show()
+        plt.savefig(f"{self.dir_}/Visual/train_confusion_matrix.png", bbox_inches='tight')
 
     def construct_classification_report(self):
+        plt.rcParams["figure.figsize"] = (20,10)
         preds = self.train.clf.predict(self.load.partition.X_test)
         A = classification_report(self.load.partition.y_test.values, preds).split('\n')
         B = np.array([row.split() for row in A[3:-5]])
@@ -31,4 +33,4 @@ class VClassification:
         im, cbar = heatmap(D, C, A_, cmap="terrain")
         texts = annotate_heatmap(im, valfmt="{x:.1f} t")
         fig.tight_layout()
-        plt.show()
+        plt.savefig(f"{self.dir_}/Visual/train_class_report.png", bbox_inches='tight')

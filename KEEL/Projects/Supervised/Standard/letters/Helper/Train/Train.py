@@ -7,6 +7,7 @@ import os
 
 from Helper.Visual.Load.classification import VClassification as loadVC
 from Helper.Visual.Transform.classification import VClassification as transformVC
+from Helper.Visual.Train.classification import VClassification as trainVC
 
 class Train:
     def __init__(self, Load, Model, Transform, hyperparameters=None):
@@ -44,8 +45,9 @@ class Train:
         os.mkdir(dir_ + "/Data")
         import pdb;pdb.set_trace()
 
-        loadVC(self.load, dir_)
-        transformVC(self.transform, dir_)
+        #loadVC(self.load, dir_)
+        #transformVC(self.transform, dir_)
+        trainVC(self)
 
         import pdb;pdb.set_trace()
 
