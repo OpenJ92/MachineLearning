@@ -20,6 +20,6 @@ The objective is to identify each of a large number of black-and-white rectangul
 [GaussianNB](Experiments/GaussianNB/)  
 [GaussianProcessClassifier](Experiments/GaussianProcessClassifier/)  
 [RandomForestClassifier](Experiments/RandomForestClassifier/)  
-[AdaBoostRFC](Experiments/AdaBoost(RandomForestClassifier\)/)  
+[AdaBoostRFC](Experiments/AdaBoost(RandomForestClassifier)/)  
 
 
