@@ -11,11 +11,6 @@ The objective is to identify each of a large number of black-and-white rectangul
 6: Classes.			26	  
 7: Missing values.	No  
 
-
-# Raw Data
-![andrews_curves raw data](Visual/load_andrews_curves.png)
-![scatter matrix raw](Visual/load_scatter_matrix.png)
-
 # Transformed Data
 ![andrews_curves transformed data](Visual/transform_andrews_curves.png)
 ![scatter matrix transformed data](Visual/transform_scatter_matrix.png)
