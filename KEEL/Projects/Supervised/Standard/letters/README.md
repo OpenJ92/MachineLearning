@@ -12,7 +12,7 @@ The objective is to identify each of a large number of black-and-white rectangul
 
 
 # Raw Data
-![andrews_curves raw data](Experiemts/RandomForest_/Visual/load_andrews_curves.png)
-![scatter matrix raw](Experiemts/RandomForest_/Visual/load_scatter_matrix.png)
+![andrews_curves raw data](Experiments/RandomForest_/Visual/load_andrews_curves.png)
+![scatter matrix raw](Experiments/RandomForest_/Visual/load_scatter_matrix.png)
 
 
