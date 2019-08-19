@@ -43,14 +43,11 @@ class Train:
         os.mkdir(dir_ + "/Model")
         os.mkdir(dir_ + "/Markdown")
         os.mkdir(dir_ + "/Data")
-        import pdb;pdb.set_trace()
 
-        #loadVC(self.load, dir_)
-        #transformVC(self.transform, dir_)
-        trainVC(self)
-
-        import pdb;pdb.set_trace()
+        loadVC(self.load, dir_)
+        transformVC(self.transform, dir_)
+        trainVC(self, dir_)
 
         dump(self.clf, f"{dir_}/Model/{name}.joblib")
-
-        import pdb;pdb.set_trace()
+        dump(self, f"{dir_}/Model/train.joblib")
+        dump(self.load, f"{dir_}/Model/load.joblib")

@@ -1,4 +1,3 @@
-from Helper.Train.Train import Train
 from sklearn.metrics import confusion_matrix, classification_report
 from Helper.Visual.Train.construct_confusion_matrix import annotate_heatmap, heatmap
 
@@ -10,9 +9,14 @@ class VClassification:
         self.train = Train
         self.dir_ = dir_
         self.load = self.train.load
+        self.construct_figures()
+
+    def construct_figures(self):
+        plt.rcParams["figure.figsize"] = (20,10)
+        self.construct_confusion_matrix()
+        self.construct_classification_report()
 
     def construct_confusion_matrix(self):
-        plt.rcParams["figure.figsize"] = (20,10)
         preds = self.train.clf.predict(self.load.partition.X_test)
         cm = confusion_matrix(self.load.partition.y_test.values, preds)
         class_ = np.unique(self.load.data[self.load.outputs].values)
@@ -23,7 +27,6 @@ class VClassification:
         plt.savefig(f"{self.dir_}/Visual/train_confusion_matrix.png", bbox_inches='tight')
 
     def construct_classification_report(self):
-        plt.rcParams["figure.figsize"] = (20,10)
         preds = self.train.clf.predict(self.load.partition.X_test)
         A = classification_report(self.load.partition.y_test.values, preds).split('\n')
         B = np.array([row.split() for row in A[3:-5]])
