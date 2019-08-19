@@ -15,4 +15,11 @@ The objective is to identify each of a large number of black-and-white rectangul
 ![andrews_curves raw data](Experiments/RandomForest_/Visual/load_andrews_curves.png)
 ![scatter matrix raw](Experiments/RandomForest_/Visual/load_scatter_matrix.png)
 
+# Experiments
+![RandomForest](Experiments/RandomForest_/)
+![GaussianNB](Experiments/GaussianNB/)
+![GaussianProcessClassifier](Experiments/GaussianProcessClassifier/)
+![RandomForestClassifier](Experiments/RandomForestClassifier/)
+![AdaBoostRFC](Experiments/AdaBoost(RandomForestClassifier\)/)
+
 
