@@ -16,10 +16,10 @@ The objective is to identify each of a large number of black-and-white rectangul
 ![scatter matrix raw](Experiments/RandomForest_/Visual/load_scatter_matrix.png)
 
 # Experiments
-![RandomForest](Experiments/RandomForest_/)
-![GaussianNB](Experiments/GaussianNB/)
-![GaussianProcessClassifier](Experiments/GaussianProcessClassifier/)
-![RandomForestClassifier](Experiments/RandomForestClassifier/)
-![AdaBoostRFC](Experiments/AdaBoost(RandomForestClassifier\)/)
+[RandomForest](Experiments/RandomForest_/)  
+[GaussianNB](Experiments/GaussianNB/)  
+[GaussianProcessClassifier](Experiments/GaussianProcessClassifier/)  
+[RandomForestClassifier](Experiments/RandomForestClassifier/)  
+[AdaBoostRFC](Experiments/AdaBoost(RandomForestClassifier\)/)  
 
 
