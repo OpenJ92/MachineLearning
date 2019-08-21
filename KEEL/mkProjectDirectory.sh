@@ -9,7 +9,7 @@ mkdir $path$name/Data/Visual;
 mkdir $path$name/Data/Markdown;
 mv $zip $path$name/Data/$zip;
 mv $txt $path$name/Data/$txt;
-cp -r Helper/ $path$name/Helper/;
+cp columns.py $path$name/columns.py
+cp hyperparameters.py $path$name/hyperparameters.py
+cp -r MasterHelper/ $path$name/Helper/;
 cd $path$name; touch __init__.py; unzip Data/$zip -d Data/;
-touch Data/columns.py
-touch Data/hyperparameters.py

@@ -1,0 +1,61 @@
+Connect-4 data set
+
+1: Description.
+
+This database contains all legal positions in the game of connect-4 for a 6x7 grid, in which neither player has won yet, and in which the next move is not forced. Thus, every attribute contains a nominal value which describes if a given position is void or if it has been occupied by one player. The task is to predict which player is likely to win the match.
+
+2: Type.			Classification	
+3: Origin.			Real World
+4: Instances.		67557
+5: Features.		42
+6: Classes.			3	
+7: Missing values.	No
+
+8: Header.
+
+@relation connect-4
+@attribute A1 {x,o,b}
+@attribute A2 {x,o,b}
+@attribute A3 {x,o,b}
+@attribute A4 {x,o,b}
+@attribute A5 {x,o,b}
+@attribute A6 {x,o,b}
+@attribute A7 {x,o,b}
+@attribute A8 {x,o,b}
+@attribute A9 {x,o,b}
+@attribute A10 {x,o,b}
+@attribute A11 {x,o,b}
+@attribute A12 {x,o,b}
+@attribute A13 {x,o,b}
+@attribute A14 {x,o,b}
+@attribute A15 {x,o,b}
+@attribute A16 {x,o,b}
+@attribute A17 {x,o,b}
+@attribute A18 {x,o,b}
+@attribute A19 {x,o,b}
+@attribute A20 {x,o,b}
+@attribute A21 {x,o,b}
+@attribute A22 {x,o,b}
+@attribute A23 {x,o,b}
+@attribute A24 {x,o,b}
+@attribute A25 {x,o,b}
+@attribute A26 {x,o,b}
+@attribute A27 {x,o,b}
+@attribute A28 {x,o,b}
+@attribute A29 {x,o,b}
+@attribute A30 {x,o,b}
+@attribute A31 {x,o,b}
+@attribute A32 {x,o,b}
+@attribute A33 {x,o,b}
+@attribute A34 {x,o,b}
+@attribute A35 {x,o,b}
+@attribute A36 {x,o,b}
+@attribute A37 {x,o,b}
+@attribute A38 {x,o,b}
+@attribute A39 {x,o,b}
+@attribute A40 {x,o,b}
+@attribute A41 {x,o,b}
+@attribute A42 {x,o,b}
+@attribute Class {win,loss,draw}
+@inputs A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, A18, A19, A20, A21, A22, A23, A24, A25, A26, A27, A28, A29, A30, A31, A32, A33, A34, A35, A36, A37, A38, A39, A40, A41, A42
+@outputs Class

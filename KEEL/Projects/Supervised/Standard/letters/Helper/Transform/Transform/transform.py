@@ -6,7 +6,6 @@ class Base_Transform:
         self.inputs = self.load.inputs
         self.columns = columns
         self.global_ = global_
-
         
     def make_input_piplines(self):
         pipelines = []

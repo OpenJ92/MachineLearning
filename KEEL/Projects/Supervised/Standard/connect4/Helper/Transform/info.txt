@@ -1,0 +1,31 @@
+We seek to automate the transformation process of our dataset to a certain extent. As
+it is said in a few of the articles below, the abstract type of each column should dictate
+the transformation applied to it. In my mind there are 4 such abstract types [1] Continuous, 
+Nominal, Dichotomous and Ordinal. These labels, and others as they come up, should be found
+in the Load class attributes which comes from the {project name}-names.txt file in the Data/ 
+directory in each project. ie.
+
+@attribute Sex Nominal {M,F,I}
+@attribute Length Continuous [0.075,0.815]
+@attribute Diameter Continuous [0.055,0.65]
+@attribute Height Continuous [0.0,1.13]
+@attribute Whole_weight Continuous [0.0020,2.8255]
+@attribute Shucked_weight Continuous [0.0010,1.488]
+@attribute Viscera_weight Continuous [0.0005,0.76]
+@attribute Shell_weight Continuous [0.0015,1.005]
+@attribute Rings Nominal {15,7,9,10,8,20,16,19,14,11,12,18,13,5,4,6,21,17,22,1,3,26,23,29,2,27,25,24}
+
+these labels should inform the transform object how to carry out it's processes. Default processes will 
+be implemented bur the user(me) should be able to override these processes given the need arises.
+
+The following is a description of each key word we expect to see:
+
+Continuous: real columns that can take on any bounded value.
+Nominal: integer columns that are categorical and have no sense of >.
+Dichotomous: integer columns that are categorical but with only two possibilities.
+Ordinal: integer columns that are categorical with some sense of >.
+
+This is an amazing article on sklearn's pipline suite and will be perfectly suitable for
+our construction.
+
+https://www.kaggle.com/baghern/a-deep-dive-into-sklearn-pipelines

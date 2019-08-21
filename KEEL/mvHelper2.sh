@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -r Helper/ $1/Helper/
+cp -r MasterHelper/ $1/Helper/
